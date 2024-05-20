@@ -25,3 +25,7 @@ The app uses a Single-user input .
 - Users can view recipe details 
 - Users can save favorite recipes 
 - Users can filter recipes by category 
+- Users can sort recipes by preparation time 
+- Users can view recently viewed recipes 
+- Users can search recipes by ingredients 
+- Users can view the "Recipe of the Day" 
