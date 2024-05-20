@@ -29,3 +29,7 @@ The app uses a Single-user input .
 - Users can view recently viewed recipes 
 - Users can search recipes by ingredients 
 - Users can view the "Recipe of the Day" 
+- Users can bookmark recipes for later viewing
+- Users can see a list of most popular recipes
+- Users can get step-by-step cooking instructions
+- Users can get cooking time estimates for recipes
