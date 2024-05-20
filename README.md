@@ -6,7 +6,7 @@ S 2 G 5
 ## Group Members
 - Patel Dhruv 
 - Shah Tirth
-
+- Dhruvkumar Patel
 
 
 ## Project Name
