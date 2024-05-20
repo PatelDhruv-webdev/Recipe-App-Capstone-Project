@@ -37,3 +37,7 @@ The app uses a Single-user input .
 - Users can see a list of most popular recipes
 - Users can get step-by-step cooking instructions
 - Users can get cooking time estimates for recipes
+- ⁠Users can enable dark mode
+- ⁠Users can adjust serving sizes for recipes
+- Users can view nutritional information
+- Users can also start the timer in the app
