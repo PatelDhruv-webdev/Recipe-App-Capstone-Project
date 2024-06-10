@@ -12,3 +12,4 @@ struct Ingredient: Codable {
     var quantity: Double
     var unit: String
 }
+

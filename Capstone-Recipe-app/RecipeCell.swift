@@ -30,3 +30,4 @@ class RecipeTableViewCell: UITableViewCell {
         recipeImageView.image = UIImage(named: recipe.imageName)  // Load image from the Asset Catalog
     }
 }
+

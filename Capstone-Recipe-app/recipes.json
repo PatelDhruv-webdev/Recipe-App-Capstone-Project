@@ -1,221 +1,222 @@
-    [
-        {
-            "title": "Spaghetti Carbonara",
-            "description": "A classic Italian dish with eggs, cheese, pancetta, and pepper.",
-            "imageName": "Spaghetti Carbonara",
-            "ingredients": [
-                {"name": "Spaghetti", "quantity": 100, "unit": "grams"},
-                {"name": "Pancetta", "quantity": 50, "unit": "grams"},
-                {"name": "Eggs", "quantity": 2, "unit": "pieces"},
-                {"name": "Parmesan Cheese", "quantity": 30, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Chicken Curry",
-            "description": "Rich and creamy curry with tender pieces of chicken.",
-            "imageName": "chicken curry",
-            "ingredients": [
-                {"name": "Chicken", "quantity": 300, "unit": "grams"},
-                {"name": "Curry Powder", "quantity": 2, "unit": "tablespoons"},
-                {"name": "Coconut Milk", "quantity": 400, "unit": "ml"}
-            ]
-        },
-        {
-            "title": "Vegetable Stir Fry",
-            "description": "Quick and healthy stir fry with fresh vegetables and soy sauce.",
-            "imageName": "fresh vegetables",
-            "ingredients": [
-                {"name": "Broccoli", "quantity": 150, "unit": "grams"},
-                {"name": "Carrots", "quantity": 100, "unit": "grams"},
-                {"name": "Bell Peppers", "quantity": 100, "unit": "grams"},
-                {"name": "Soy Sauce", "quantity": 2, "unit": "tablespoons"}
-            ]
-        },
-        {
-            "title": "Beef Tacos",
-            "description": "Crispy tacos filled with seasoned beef, cheese, and fresh salsa.",
-            "imageName": "beef tacos",
-            "ingredients": [
-                {"name": "Ground Beef", "quantity": 200, "unit": "grams"},
-                {"name": "Taco Shells", "quantity": 6, "unit": "pieces"},
-                {"name": "Cheese", "quantity": 50, "unit": "grams"},
-                {"name": "Salsa", "quantity": 100, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Chocolate Cake",
-            "description": "Rich and moist chocolate cake with a creamy chocolate ganache.",
-            "imageName": "chocolate cake",
-            "ingredients": [
-                {"name": "Flour", "quantity": 200, "unit": "grams"},
-                {"name": "Sugar", "quantity": 150, "unit": "grams"},
-                {"name": "Cocoa Powder", "quantity": 50, "unit": "grams"},
-                {"name": "Eggs", "quantity": 3, "unit": "pieces"}
-            ]
-        },
-        {
-            "title": "Caesar Salad",
-            "description": "Classic Caesar salad with romaine lettuce, parmesan, and croutons.",
-            "imageName": "Caesar salad",
-            "ingredients": [
-                {"name": "Romaine Lettuce", "quantity": 200, "unit": "grams"},
-                {"name": "Parmesan Cheese", "quantity": 50, "unit": "grams"},
-                {"name": "Croutons", "quantity": 100, "unit": "grams"},
-                {"name": "Caesar Dressing", "quantity": 50, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Margherita Pizza",
-            "description": "Simple pizza with fresh tomatoes, mozzarella cheese, and basil.",
-            "imageName": "Margherita pizza",
-            "ingredients": [
-                {"name": "Pizza Dough", "quantity": 1, "unit": "piece"},
-                {"name": "Tomatoes", "quantity": 150, "unit": "grams"},
-                {"name": "Mozzarella", "quantity": 100, "unit": "grams"},
-                {"name": "Basil", "quantity": 10, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Lamb Rogan Josh",
-            "description": "Aromatic lamb curry with a mix of spices and yogurt.",
-            "imageName": "chocolate cake",
-            "ingredients": [
-                {"name": "Lamb", "quantity": 300, "unit": "grams"},
-                {"name": "Yogurt", "quantity": 200, "unit": "grams"},
-                {"name": "Spices", "quantity": 20, "unit": "grams"},
-                {"name": "Onions", "quantity": 100, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Grilled Salmon",
-            "description": "Perfectly grilled salmon with a lemon butter sauce.",
-            "imageName": "salmon",
-            "ingredients": [
-                {"name": "Salmon", "quantity": 200, "unit": "grams"},
-                {"name": "Lemon", "quantity": 1, "unit": "piece"},
-                {"name": "Butter", "quantity": 50, "unit": "grams"},
-                {"name": "Garlic", "quantity": 10, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Pasta Primavera",
-            "description": "Pasta with a colorful mix of vegetables and a light tomato sauce.",
-            "imageName": "Pasta Primavera",
-            "ingredients": [
-                {"name": "Pasta", "quantity": 200, "unit": "grams"},
-                {"name": "Tomatoes", "quantity": 100, "unit": "grams"},
-                {"name": "Bell Peppers", "quantity": 100, "unit": "grams"},
-                {"name": "Olive Oil", "quantity": 20, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Mushroom Risotto",
-            "description": "Creamy risotto with sautéed mushrooms and parmesan cheese.",
-            "imageName": "mushroom risotto",
-            "ingredients": [
-                {"name": "Rice", "quantity": 200, "unit": "grams"},
-                {"name": "Mushrooms", "quantity": 150, "unit": "grams"},
-                {"name": "Parmesan Cheese", "quantity": 50, "unit": "grams"},
-                {"name": "Butter", "quantity": 50, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Pad Thai",
-            "description": "Traditional Thai noodle dish with peanuts, tofu, and lime.",
-            "imageName": "Thai Pad",
-            "ingredients": [
-                {"name": "Rice Noodles", "quantity": 200, "unit": "grams"},
-                {"name": "Tofu", "quantity": 100, "unit": "grams"},
-                {"name": "Peanuts", "quantity": 50, "unit": "grams"},
-                {"name": "Lime", "quantity": 1, "unit": "piece"}
-            ]
-        },
-        {
-            "title": "French Onion Soup",
-            "description": "Hearty onion soup topped with a toasted bread slice and melted cheese.",
-            "imageName": "French onion soup",
-            "ingredients": [
-                {"name": "Onions", "quantity": 300, "unit": "grams"},
-                {"name": "Beef Broth", "quantity": 500, "unit": "ml"},
-                {"name": "Bread", "quantity": 2, "unit": "slices"},
-                {"name": "Cheese", "quantity": 50, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "BBQ Ribs",
-            "description": "Slow-cooked ribs coated in a rich BBQ sauce.",
-            "imageName": "ribs",
-            "ingredients": [
-                {"name": "Ribs", "quantity": 500, "unit": "grams"},
-                {"name": "BBQ Sauce", "quantity": 200, "unit": "grams"},
-                {"name": "Garlic Powder", "quantity": 10, "unit": "grams"},
-                {"name": "Onion Powder", "quantity": 10, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Apple Pie",
-            "description": "Classic apple pie with a flaky crust and sweet apple filling.",
-            "imageName": "apple pie",
-            "ingredients": [
-                {"name": "Apples", "quantity": 300, "unit": "grams"},
-                {"name": "Pie Crust", "quantity": 1, "unit": "piece"},
-                {"name": "Sugar", "quantity": 100, "unit": "grams"},
-                {"name": "Cinnamon", "quantity": 5, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Banh Mi",
-            "description": "Vietnamese sandwich with pork, pickled vegetables, and herbs.",
-            "imageName": "Mi sandwich",
-            "ingredients": [
-                {"name": "Baguette", "quantity": 1, "unit": "piece"},
-                {"name": "Pork", "quantity": 150, "unit": "grams"},
-                {"name": "Pickled Vegetables", "quantity": 100, "unit": "grams"},
-                {"name": "Cilantro", "quantity": 10, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Falafel Wrap",
-            "description": "Middle Eastern chickpea falafel balls served in a wrap with tahini sauce.",
-            "imageName": "falafel wrap with chickpea falafel balls",
-            "ingredients": [
-                {"name": "Falafel", "quantity": 200, "unit": "grams"},
-                {"name": "Wrap", "quantity": 1, "unit": "piece"},
-                {"name": "Tahini Sauce", "quantity": 50, "unit": "grams"},
-                {"name": "Lettuce", "quantity": 50, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Chicken Biryani",
-            "description": "Flavorful Indian dish with marinated chicken and spiced rice.",
-            "imageName": "Indian chicken biryani",
-            "ingredients": [
-                {"name": "Chicken", "quantity": 300, "unit": "grams"},
-                {"name": "Basmati Rice", "quantity": 200, "unit": "grams"},
-                {"name": "Yogurt", "quantity": 100, "unit": "grams"},
-                {"name": "Spices", "quantity": 20, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Lemon Cheesecake",
-            "description": "Smooth and creamy cheesecake with a tangy lemon topping.",
-            "imageName": "lemon cheesecake",
-            "ingredients": [
-                {"name": "Cream Cheese", "quantity": 300, "unit": "grams"},
-                {"name": "Sugar", "quantity": 100, "unit": "grams"},
-                {"name": "Lemon Juice", "quantity": 50, "unit": "ml"},
-                {"name": "Graham Crackers", "quantity": 100, "unit": "grams"}
-            ]
-        },
-        {
-            "title": "Sushi Platter",
-            "description": "Assorted sushi including nigiri, maki rolls, and sashimi.",
-            "imageName": "sushi platter",
-            "ingredients": [
-                {"name": "Sushi Rice", "quantity": 200, "unit": "grams"},
-                {"name": "Fish", "quantity": 150, "unit": "grams"},
-                {"name": "Seaweed", "quantity": 5, "unit": "sheets"},
-                {"name": "Vegetables", "quantity": 100, "unit": "grams"}
-            ]
-        }
-    ]
+[
+    {
+        "title": "Spaghetti Carbonara",
+        "description": "A classic Italian dish with eggs, cheese, pancetta, and pepper.",
+        "imageName": "Spaghetti Carbonara",
+        "ingredients": [
+            {"name": "Spaghetti", "quantity": 100, "unit": "grams"},
+            {"name": "Pancetta", "quantity": 50, "unit": "grams"},
+            {"name": "Eggs", "quantity": 2, "unit": "pieces"},
+            {"name": "Parmesan Cheese", "quantity": 30, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Chicken Curry",
+        "description": "Rich and creamy curry with tender pieces of chicken.",
+        "imageName": "chicken curry",
+        "ingredients": [
+            {"name": "Chicken", "quantity": 300, "unit": "grams"},
+            {"name": "Curry Powder", "quantity": 2, "unit": "tablespoons"},
+            {"name": "Coconut Milk", "quantity": 400, "unit": "ml"}
+        ]
+    },
+    {
+        "title": "Vegetable Stir Fry",
+        "description": "Quick and healthy stir fry with fresh vegetables and soy sauce.",
+        "imageName": "fresh vegetables",
+        "ingredients": [
+            {"name": "Broccoli", "quantity": 150, "unit": "grams"},
+            {"name": "Carrots", "quantity": 100, "unit": "grams"},
+            {"name": "Bell Peppers", "quantity": 100, "unit": "grams"},
+            {"name": "Soy Sauce", "quantity": 2, "unit": "tablespoons"}
+        ]
+    },
+    {
+        "title": "Beef Tacos",
+        "description": "Crispy tacos filled with seasoned beef, cheese, and fresh salsa.",
+        "imageName": "beef tacos",
+        "ingredients": [
+            {"name": "Ground Beef", "quantity": 200, "unit": "grams"},
+            {"name": "Taco Shells", "quantity": 6, "unit": "pieces"},
+            {"name": "Cheese", "quantity": 50, "unit": "grams"},
+            {"name": "Salsa", "quantity": 100, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Chocolate Cake",
+        "description": "Rich and moist chocolate cake with a creamy chocolate ganache.",
+        "imageName": "chocolate cake",
+        "ingredients": [
+            {"name": "Flour", "quantity": 200, "unit": "grams"},
+            {"name": "Sugar", "quantity": 150, "unit": "grams"},
+            {"name": "Cocoa Powder", "quantity": 50, "unit": "grams"},
+            {"name": "Eggs", "quantity": 3, "unit": "pieces"}
+        ]
+    },
+    {
+        "title": "Caesar Salad",
+        "description": "Classic Caesar salad with romaine lettuce, parmesan, and croutons.",
+        "imageName": "Caesar salad",
+        "ingredients": [
+            {"name": "Romaine Lettuce", "quantity": 200, "unit": "grams"},
+            {"name": "Parmesan Cheese", "quantity": 50, "unit": "grams"},
+            {"name": "Croutons", "quantity": 100, "unit": "grams"},
+            {"name": "Caesar Dressing", "quantity": 50, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Margherita Pizza",
+        "description": "Simple pizza with fresh tomatoes, mozzarella cheese, and basil.",
+        "imageName": "Margherita pizza",
+        "ingredients": [
+            {"name": "Pizza Dough", "quantity": 1, "unit": "piece"},
+            {"name": "Tomatoes", "quantity": 150, "unit": "grams"},
+            {"name": "Mozzarella", "quantity": 100, "unit": "grams"},
+            {"name": "Basil", "quantity": 10, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Lamb Rogan Josh",
+        "description": "Aromatic lamb curry with a mix of spices and yogurt.",
+        "imageName": "chocolate cake",
+        "ingredients": [
+            {"name": "Lamb", "quantity": 300, "unit": "grams"},
+            {"name": "Yogurt", "quantity": 200, "unit": "grams"},
+            {"name": "Spices", "quantity": 20, "unit": "grams"},
+            {"name": "Onions", "quantity": 100, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Grilled Salmon",
+        "description": "Perfectly grilled salmon with a lemon butter sauce.",
+        "imageName": "salmon",
+        "ingredients": [
+            {"name": "Salmon", "quantity": 200, "unit": "grams"},
+            {"name": "Lemon", "quantity": 1, "unit": "piece"},
+            {"name": "Butter", "quantity": 50, "unit": "grams"},
+            {"name": "Garlic", "quantity": 10, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Pasta Primavera",
+        "description": "Pasta with a colorful mix of vegetables and a light tomato sauce.",
+        "imageName": "Pasta Primavera",
+        "ingredients": [
+            {"name": "Pasta", "quantity": 200, "unit": "grams"},
+            {"name": "Tomatoes", "quantity": 100, "unit": "grams"},
+            {"name": "Bell Peppers", "quantity": 100, "unit": "grams"},
+            {"name": "Olive Oil", "quantity": 20, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Mushroom Risotto",
+        "description": "Creamy risotto with sautéed mushrooms and parmesan cheese.",
+        "imageName": "mushroom risotto",
+        "ingredients": [
+            {"name": "Rice", "quantity": 200, "unit": "grams"},
+            {"name": "Mushrooms", "quantity": 150, "unit": "grams"},
+            {"name": "Parmesan Cheese", "quantity": 50, "unit": "grams"},
+            {"name": "Butter", "quantity": 50, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Pad Thai",
+        "description": "Traditional Thai noodle dish with peanuts, tofu, and lime.",
+        "imageName": "Thai Pad",
+        "ingredients": [
+            {"name": "Rice Noodles", "quantity": 200, "unit": "grams"},
+            {"name": "Tofu", "quantity": 100, "unit": "grams"},
+            {"name": "Peanuts", "quantity": 50, "unit": "grams"},
+            {"name": "Lime", "quantity": 1, "unit": "piece"}
+        ]
+    },
+    {
+        "title": "French Onion Soup",
+        "description": "Hearty onion soup topped with a toasted bread slice and melted cheese.",
+        "imageName": "French onion soup",
+        "ingredients": [
+            {"name": "Onions", "quantity": 300, "unit": "grams"},
+            {"name": "Beef Broth", "quantity": 500, "unit": "ml"},
+            {"name": "Bread", "quantity": 2, "unit": "slices"},
+            {"name": "Cheese", "quantity": 50, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "BBQ Ribs",
+        "description": "Slow-cooked ribs coated in a rich BBQ sauce.",
+        "imageName": "ribs",
+        "ingredients": [
+            {"name": "Ribs", "quantity": 500, "unit": "grams"},
+            {"name": "BBQ Sauce", "quantity": 200, "unit": "grams"},
+            {"name": "Garlic Powder", "quantity": 10, "unit": "grams"},
+            {"name": "Onion Powder", "quantity": 10, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Apple Pie",
+        "description": "Classic apple pie with a flaky crust and sweet apple filling.",
+        "imageName": "apple pie",
+        "ingredients": [
+            {"name": "Apples", "quantity": 300, "unit": "grams"},
+            {"name": "Pie Crust", "quantity": 1, "unit": "piece"},
+            {"name": "Sugar", "quantity": 100, "unit": "grams"},
+            {"name": "Cinnamon", "quantity": 5, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Banh Mi",
+        "description": "Vietnamese sandwich with pork, pickled vegetables, and herbs.",
+        "imageName": "Mi sandwich",
+        "ingredients": [
+            {"name": "Baguette", "quantity": 1, "unit": "piece"},
+            {"name": "Pork", "quantity": 150, "unit": "grams"},
+            {"name": "Pickled Vegetables", "quantity": 100, "unit": "grams"},
+            {"name": "Cilantro", "quantity": 10, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Falafel Wrap",
+        "description": "Middle Eastern chickpea falafel balls served in a wrap with tahini sauce.",
+        "imageName": "falafel wrap with chickpea falafel balls",
+        "ingredients": [
+            {"name": "Falafel", "quantity": 200, "unit": "grams"},
+            {"name": "Wrap", "quantity": 1, "unit": "piece"},
+            {"name": "Tahini Sauce", "quantity": 50, "unit": "grams"},
+            {"name": "Lettuce", "quantity": 50, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Chicken Biryani",
+        "description": "Flavorful Indian dish with marinated chicken and spiced rice.",
+        "imageName": "Indian chicken biryani",
+        "ingredients": [
+            {"name": "Chicken", "quantity": 300, "unit": "grams"},
+            {"name": "Basmati Rice", "quantity": 200, "unit": "grams"},
+            {"name": "Yogurt", "quantity": 100, "unit": "grams"},
+            {"name": "Spices", "quantity": 20, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Lemon Cheesecake",
+        "description": "Smooth and creamy cheesecake with a tangy lemon topping.",
+        "imageName": "lemon cheesecake",
+        "ingredients": [
+            {"name": "Cream Cheese", "quantity": 300, "unit": "grams"},
+            {"name": "Sugar", "quantity": 100, "unit": "grams"},
+            {"name": "Lemon Juice", "quantity": 50, "unit": "ml"},
+            {"name": "Graham Crackers", "quantity": 100, "unit": "grams"}
+        ]
+    },
+    {
+        "title": "Sushi Platter",
+        "description": "Assorted sushi including nigiri, maki rolls, and sashimi.",
+        "imageName": "sushi platter",
+        "ingredients": [
+            {"name": "Sushi Rice", "quantity": 200, "unit": "grams"},
+            {"name": "Fish", "quantity": 150, "unit": "grams"},
+            {"name": "Seaweed", "quantity": 5, "unit": "sheets"},
+            {"name": "Vegetables", "quantity": 100, "unit": "grams"}
+        ]
+    }
+]
+

@@ -1,11 +1,13 @@
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUpdating {
     
     @IBOutlet weak var tableView: UITableView!
 
     var recipes = [Recipe]()
-    
+    var filteredRecipes = [Recipe]()
+
+    let searchController = UISearchController(searchResultsController: nil)
     var noResultsLabel: UILabel = {
         let label = UILabel()
         label.text = "No recipes found."
@@ -17,8 +19,9 @@ class ViewController: UIViewController, UITableViewDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Recipe-app"
+        self.title = "Recippe-app"
         setupTableView()
+        setupSearchController()
         loadRecipes()
     }
 
@@ -27,25 +30,48 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.addSubview(noResultsLabel)
     }
 
+    private func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Recipes"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
+    }
+
     private func loadRecipes() {
         RecipeService.shared.loadRecipes { [weak self] loadedRecipes in
             self?.recipes = loadedRecipes
+            self?.filteredRecipes = loadedRecipes
             self?.tableView.reloadData()
         }
     }
 
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text, !searchText.isEmpty else {
+            filteredRecipes = recipes
+            updateNoResultsLabel()
+            return
+        }
+
+        filteredRecipes = recipes.filter { recipe in
+            recipe.title.lowercased().contains(searchText.lowercased())
+        }
+
+        updateNoResultsLabel()
+    }
+
     private func updateNoResultsLabel() {
-        noResultsLabel.isHidden = !recipes.isEmpty
+        noResultsLabel.isHidden = !filteredRecipes.isEmpty
         tableView.reloadData()
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return recipes.count
+        return filteredRecipes.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeTableViewCell
-        cell.recipe = recipes[indexPath.row]
+        cell.recipe = filteredRecipes[indexPath.row]
         return cell
     }
 
@@ -55,3 +81,4 @@ class ViewController: UIViewController, UITableViewDataSource {
         noResultsLabel.center = CGPoint(x: tableView.center.x, y: tableView.bounds.height / 2)
     }
 }
+
