@@ -4,7 +4,8 @@ class RecipeTableViewCell: UITableViewCell {
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-
+    @IBOutlet weak var servingSizeLabel: UILabel!
+    
     var recipe: Recipe? {
         didSet {
             updateUI()

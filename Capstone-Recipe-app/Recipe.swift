@@ -5,11 +5,11 @@ struct Recipe: Codable {
     var description: String
     var imageName: String
     var ingredients: [Ingredient]
+//    var category: String
 }
 
 struct Ingredient: Codable {
     var name: String
-    var quantity: Double
+    var quantities: [String: Double]
     var unit: String
 }
-
