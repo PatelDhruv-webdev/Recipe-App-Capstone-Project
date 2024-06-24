@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBA36D2A2C28F5E800968C12 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA36D292C28F5E800968C12 /* RecipeDetailViewController.swift */; };
 		FC731AA42C15266200F66A4D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC731AA32C15266200F66A4D /* Recipe.swift */; };
 		FC731AA62C15268200F66A4D /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC731AA52C15268200F66A4D /* RecipeCell.swift */; };
 		FC731AA82C152C0A00F66A4D /* RecipeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC731AA72C152C0A00F66A4D /* RecipeService.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DBA36D292C28F5E800968C12 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 		FC731AA32C15266200F66A4D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		FC731AA52C15268200F66A4D /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		FC731AA72C152C0A00F66A4D /* RecipeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeService.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				FC7D8AE52BFAEE6F002B04A9 /* SceneDelegate.swift */,
 				FC7D8AE72BFAEE6F002B04A9 /* ViewController.swift */,
 				FC7D8AE92BFAEE6F002B04A9 /* Main.storyboard */,
+				DBA36D292C28F5E800968C12 /* RecipeDetailViewController.swift */,
 				FC7D8AEF2BFAEE71002B04A9 /* Assets.xcassets */,
 				FC7D8AF12BFAEE71002B04A9 /* LaunchScreen.storyboard */,
 				FC7D8AF42BFAEE71002B04A9 /* Info.plist */,
@@ -156,6 +159,7 @@
 			files = (
 				FC7D8AEE2BFAEE6F002B04A9 /* Capstone_Recipe_app.xcdatamodeld in Sources */,
 				FC7D8AE82BFAEE6F002B04A9 /* ViewController.swift in Sources */,
+				DBA36D2A2C28F5E800968C12 /* RecipeDetailViewController.swift in Sources */,
 				FC731AA82C152C0A00F66A4D /* RecipeService.swift in Sources */,
 				FC7D8AE42BFAEE6F002B04A9 /* AppDelegate.swift in Sources */,
 				FC731AA62C15268200F66A4D /* RecipeCell.swift in Sources */,

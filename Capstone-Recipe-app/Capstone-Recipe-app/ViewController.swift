@@ -1,13 +1,12 @@
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUpdating {
+class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUpdating, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
 
     var recipes = [Recipe]()
     var filteredRecipes = [Recipe]()
-    var servingSizeFilter: String = "Single"
-//    var categoryFilter: String?
+    var servingSizeFilter: String = "Single" // Declare servingSizeFilter here
 
     let searchController = UISearchController(searchResultsController: nil)
     var noResultsLabel: UILabel = {
@@ -21,11 +20,20 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Recippe-app"
+        self.title = "Recipe-app"
         setupTableView()
         setupSearchController()
         loadRecipes()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowRecipeDetail",
+           let destinationVC = segue.destination as? RecipeDetailViewController,
+           let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.recipe = filteredRecipes[indexPath.row]
+            destinationVC.selectedFilter = servingSizeFilter  // Pass the selected serving size
+        }
+    }
+
 
     private func setupTableView() {
         tableView.dataSource = self
@@ -41,13 +49,13 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
     }
 
     private func loadRecipes() {
-        RecipeService.shared.loadRecipes { [weak self] loadedRecipes in
-            self?.recipes = loadedRecipes
-            self?.filteredRecipes = loadedRecipes
-            self?.tableView.reloadData()
-            self?.applyFilters()
+            RecipeService.shared.loadRecipes { [weak self] loadedRecipes in
+                self?.recipes = loadedRecipes
+                self?.filteredRecipes = loadedRecipes
+                self?.tableView.reloadData()
+                self?.applyFilters()
+            }
         }
-    }
 
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchText = searchController.searchBar.text, !searchText.isEmpty else {
@@ -80,15 +88,21 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredRecipes.count
+        return recipes.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeTableViewCell
         cell.recipe = filteredRecipes[indexPath.row]
+        cell.servingSizeFilter = servingSizeFilter // Pass servingSizeFilter to the cell
         cell.servingSizeLabel.text = "\(servingSizeFilter)"
         return cell
     }
+
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            performSegue(withIdentifier: "ShowRecipeDetail", sender: self)
+        }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

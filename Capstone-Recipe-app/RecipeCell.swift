@@ -12,6 +12,8 @@ class RecipeTableViewCell: UITableViewCell {
         }
     }
 
+    var servingSizeFilter: String = "Single" // Add this property
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupLabels()
@@ -28,7 +30,18 @@ class RecipeTableViewCell: UITableViewCell {
         guard let recipe = recipe else { return }
         titleLabel.text = recipe.title
         descriptionLabel.text = recipe.description
-        recipeImageView.image = UIImage(named: recipe.imageName)  // Load image from the Asset Catalog
+        
+        if let imageName = recipe.imageName {
+            recipeImageView.image = UIImage(named: imageName) ?? UIImage(named: "defaultRecipeImage")
+        } else {
+            recipeImageView.image = UIImage(named: "defaultRecipeImage")
+        }
+
+        // Update servingSizeLabel based on servingSizeFilter
+        if let firstIngredient = recipe.ingredients.first {
+            let quantity = firstIngredient.quantities[servingSizeFilter] ?? 0
+            servingSizeLabel.text = "First ingredient (\(firstIngredient.name)): \(quantity) \(firstIngredient.unit)"
+        }
     }
 }
 
