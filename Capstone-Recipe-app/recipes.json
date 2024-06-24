@@ -1,16 +1,17 @@
 [
     {
-        "title": "Spaghetti Carbonara",
-        "description": "A classic Italian dish with eggs, cheese, pancetta, and pepper.",
-        "imageName": "Spaghetti Carbonara",
-        "ingredients": [
-            {"name": "Spaghetti", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Pancetta", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Eggs", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "pieces"},
-            {"name": "Parmesan Cheese", "quantities": {"Single": 30, "Couple": 60, "Family": 120}, "unit": "grams"}
-        ],
-        "category": "Veg."
-    },
+            "title": "Spaghetti Carbonara",
+            "description": "A classic Italian dish with eggs, cheese, pancetta, and pepper.",
+            "imageName": "Spaghetti Carbonara",
+            "ingredients": [
+                {"name": "Spaghetti", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
+                {"name": "Pancetta", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
+                {"name": "Eggs", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "pieces"},
+                {"name": "Parmesan Cheese", "quantities": {"Single": 30, "Couple": 60, "Family": 120}, "unit": "grams"}
+            ],
+            "category": "Veg.",
+            "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"}
+        },
     {
         "title": "Chicken Curry",
         "description": "Rich and creamy curry with tender pieces of chicken.",
@@ -20,7 +21,8 @@
             {"name": "Curry Powder", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "tablespoons"},
             {"name": "Coconut Milk", "quantities": {"Single": 400, "Couple": 800, "Family": 1600}, "unit": "ml"}
         ],
-        "category": "Non-Veg."
+        "category": "Non-Veg.",
+        "time": {"Single": "40 mins", "Couple": "50 mins", "Family": "60 mins"}
     },
     {
         "title": "Vegetable Stir Fry",
@@ -32,7 +34,8 @@
             {"name": "Bell Peppers", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
             {"name": "Soy Sauce", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "tablespoons"}
         ],
-        "category": "Veg."
+        "category": "Veg.",
+        "time": {"Single": "20 mins", "Couple": "25 mins", "Family": "30 mins"}
     },
     {
         "title": "Beef Tacos",
@@ -44,7 +47,8 @@
             {"name": "Cheese", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
             {"name": "Salsa", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"}
         ],
-        "category": "Non-Veg."
+        "category": "Non-Veg.",
+        "time": {"Single": "25 mins", "Couple": "30 mins", "Family": "35 mins"}
     },
     {
         "title": "Chocolate Cake",
@@ -56,7 +60,8 @@
             {"name": "Cocoa Powder", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
             {"name": "Eggs", "quantities": {"Single": 3, "Couple": 6, "Family": 12}, "unit": "pieces"}
         ],
-        "category": "Veg."
+        "category": "Veg.",
+        "time": {"Single": "45 mins", "Couple": "55 mins", "Family": "65 mins"}
     },
     {
         "title": "Caesar Salad",
@@ -68,7 +73,8 @@
             {"name": "Croutons", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
             {"name": "Caesar Dressing", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"}
         ],
-        "category": "Veg."
+        "category": "Veg.",
+        "time": {"Single": "15 mins", "Couple": "20 mins", "Family": "25 mins"}
     },
     {
         "title": "Margherita Pizza",
@@ -80,7 +86,8 @@
             {"name": "Mozzarella", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
             {"name": "Basil", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"}
         ],
-        "category": "Veg."
+        "category": "Veg.",
+        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"}
     },
     {
         "title": "Lamb Rogan Josh",
@@ -92,7 +99,8 @@
             {"name": "Spices", "quantities": {"Single": 20, "Couple": 40, "Family": 80}, "unit": "grams"},
             {"name": "Onions", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"}
         ],
-        "category": "Non-Veg."
+        "category": "Non-Veg.",
+        "time": {"Single": "50 mins", "Couple": "60 mins", "Family": "70 mins"}
     },
     {
         "title": "Grilled Salmon",
@@ -104,138 +112,20 @@
             {"name": "Butter", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
             {"name": "Garlic", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"}
         ],
-        "category": "Non-Veg."
+        "category": "Non-Veg.",
+        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"}
     },
     {
-        "title": "Pasta Primavera",
-        "description": "Pasta with a colorful mix of vegetables and a light tomato sauce.",
-        "imageName": "Pasta Primavera",
+        "title": "Pancakes",
+        "description": "Fluffy pancakes served with maple syrup and butter.",
+        "imageName": "Pancakes",
         "ingredients": [
-            {"name": "Pasta", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Tomatoes", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Bell Peppers", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Olive Oil", "quantities": {"Single": 20, "Couple": 40, "Family": 80}, "unit": "grams"}
+            {"name": "Flour", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
+            {"name": "Milk", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "ml"},
+            {"name": "Eggs", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "pieces"},
+            {"name": "Butter", "quantities": {"Single": 20, "Couple": 40, "Family": 80}, "unit": "grams"}
         ],
-        "category": "Veg."
-    },
-    {
-        "title": "Mushroom Risotto",
-        "description": "Creamy risotto with sautéed mushrooms and parmesan cheese.",
-        "imageName": "Mushroom Risotto",
-        "ingredients": [
-            {"name": "Rice", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Mushrooms", "quantities": {"Single": 150, "Couple": 300, "Family": 600}, "unit": "grams"},
-            {"name": "Parmesan Cheese", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Butter", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"}
-        ],
-        "category": "Veg."
-    },
-    {
-        "title": "Pad Thai",
-        "description": "Traditional Thai noodle dish with peanuts, tofu, and lime.",
-        "imageName": "Thai Pad",
-        "ingredients": [
-            {"name": "Rice Noodles", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Tofu", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Peanuts", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Lime", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"}
-        ],
-        "category": "Veg."
-    },
-    {
-        "title": "French Onion Soup",
-        "description": "Hearty onion soup topped with a toasted bread slice and melted cheese.",
-        "imageName": "French Onion Soup",
-        "ingredients": [
-            {"name": "Onions", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Beef Broth", "quantities": {"Single": 500, "Couple": 1000, "Family": 2000}, "unit": "ml"},
-            {"name": "Bread", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "slices"},
-            {"name": "Cheese", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"}
-        ],
-        "category": "Veg."
-    },
-    {
-        "title": "BBQ Ribs",
-        "description": "Slow-cooked ribs coated in a rich BBQ sauce.",
-        "imageName": "BBQ Ribs",
-        "ingredients": [
-            {"name": "Ribs", "quantities": {"Single": 500, "Couple": 1000, "Family": 2000}, "unit": "grams"},
-            {"name": "BBQ Sauce", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Garlic Powder", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"},
-            {"name": "Onion Powder", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"}
-        ],
-        "category": "Non-Veg."
-    },
-    {
-        "title": "Apple Pie",
-        "description": "Classic apple pie with a flaky crust and sweet apple filling.",
-        "imageName": "Apple Pie",
-        "ingredients": [
-            {"name": "Apples", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Pie Crust", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"},
-            {"name": "Sugar", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Cinnamon", "quantities": {"Single": 5, "Couple": 10, "Family": 20}, "unit": "grams"}
-        ],
-        "category": "Veg."
-    },
-    {
-        "title": "Banh Mi",
-        "description": "Vietnamese sandwich with pork, pickled vegetables, and herbs.",
-        "imageName": "Mi Sandwich",
-        "ingredients": [
-            {"name": "Baguette", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"},
-            {"name": "Pork", "quantities": {"Single": 150, "Couple": 300, "Family": 600}, "unit": "grams"},
-            {"name": "Pickled Vegetables", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Cilantro", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"}
-        ],
-        "category": "Non-Veg."
-    },
-    {
-        "title": "Falafel Wrap",
-        "description": "Middle Eastern chickpea falafel balls served in a wrap with tahini sauce.",
-        "imageName": "Falafel Wrap",
-        "ingredients": [
-            {"name": "Falafel", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Wrap", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"},
-            {"name": "Tahini Sauce", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Lettuce", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"}
-        ],
-        "category": "Veg."
-    },
-    {
-        "title": "Chicken Biryani",
-        "description": "Flavorful Indian dish with marinated chicken and spiced rice.",
-        "imageName": "Chicken Biryani",
-        "ingredients": [
-            {"name": "Chicken", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Basmati Rice", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Yogurt", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Spices", "quantities": {"Single": 20, "Couple": 40, "Family": 80}, "unit": "grams"}
-        ],
-        "category": "Non-Veg."
-    },
-    {
-        "title": "Lemon Cheesecake",
-        "description": "Smooth and creamy cheesecake with a tangy lemon topping.",
-        "imageName": "Lemon Cheese Cake",
-        "ingredients": [
-            {"name": "Cream Cheese", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Sugar", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Lemon Juice", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "ml"},
-            {"name": "Graham Crackers", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"}
-        ],
-        "category": "Veg."
-    },
-    {
-        "title": "Sushi Platter",
-        "description": "Assorted sushi including nigiri, maki rolls, and sashimi.",
-        "imageName": "Sushi Platter",
-        "ingredients": [
-            {"name": "Sushi Rice", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Fish", "quantities": {"Single": 150, "Couple": 300, "Family": 600}, "unit": "grams"},
-            {"name": "Seaweed", "quantities": {"Single": 5, "Couple": 10, "Family": 20}, "unit": "sheets"},
-            {"name": "Vegetables", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"}
-        ],
-        "category": "Non-Veg."
+        "category": "Veg.",
+        "time": {"Single": "20 mins", "Couple": "25 mins", "Family": "30 mins"}
     }
 ]

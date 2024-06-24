@@ -19,7 +19,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
         return label
     }()
     
-    var isSegueInProgress = false // Flag to prevent multiple segues
+    var isSegueInProgress = false 
 
     override func viewDidLoad() {
         super.viewDidLoad()

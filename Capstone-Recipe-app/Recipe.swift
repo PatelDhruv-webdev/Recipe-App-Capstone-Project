@@ -6,6 +6,19 @@ struct Recipe: Codable {
     var imageName: String?
     var ingredients: [Ingredient]
     var category: String
+    var time: TimeInfo
+    
+    struct TimeInfo: Codable {
+        var single: String
+        var couple: String
+        var family: String
+        
+        enum CodingKeys: String, Swift.CodingKey {
+            case single = "Single"
+            case couple = "Couple"
+            case family = "Family"
+        }
+    }
 }
 
 struct Ingredient: Codable {
