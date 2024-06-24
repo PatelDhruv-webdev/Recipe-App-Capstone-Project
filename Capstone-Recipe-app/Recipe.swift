@@ -5,7 +5,7 @@ struct Recipe: Codable {
     var description: String
     var imageName: String?
     var ingredients: [Ingredient]
-//    var category: String
+    var category: String
 }
 
 struct Ingredient: Codable {

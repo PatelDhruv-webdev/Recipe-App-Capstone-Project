@@ -1,7 +1,7 @@
 import UIKit
 
 class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -25,7 +25,7 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
         ingredientsTableView.dataSource = self
         ingredientsTableView.delegate = self
     }
-    
+
     private func updateUI() {
         guard isViewLoaded else { return }
         guard let recipe = recipe else { return }
@@ -38,7 +38,7 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
         }
         ingredientsTableView.reloadData()
     }
-    
+
     private func debugOutlets() {
         if imageView == nil {
             print("imageView is nil")
@@ -53,12 +53,12 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
             print("ingredientsTableView is nil")
         }
     }
-    
+
     // Table View Data Source Methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipe?.ingredients.count ?? 0
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath)
         if let ingredient = recipe?.ingredients[indexPath.row] {
@@ -66,5 +66,14 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
             cell.textLabel?.text = "\(ingredient.name): \(quantity) \(ingredient.unit)"
         }
         return cell
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.isMovingFromParent || self.isBeingDismissed {
+            if let parentVC = self.navigationController?.viewControllers.first as? ViewController {
+                parentVC.isSegueInProgress = false // Reset the flag when coming back
+            }
+        }
     }
 }
