@@ -4,258 +4,675 @@
         "description": "A classic Italian dish with eggs, cheese, pancetta, and pepper.",
         "imageName": "Spaghetti Carbonara",
         "ingredients": [
-            {"name": "Spaghetti", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Pancetta", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Eggs", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "pieces"},
-            {"name": "Parmesan Cheese", "quantities": {"Single": 30, "Couple": 60, "Family": 120}, "unit": "grams"}
+            {
+                "name": "Spaghetti",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Pancetta",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Eggs",
+                "quantities": {"Single": 2.0, "Couple": 4.0, "Family": 8.0},
+                "unit": "pieces"
+            },
+            {
+                "name": "Parmesan Cheese",
+                "quantities": {"Single": 30.0, "Couple": 60.0, "Family": 120.0},
+                "unit": "grams"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"}
+        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"},
+        "nutrition": {
+            "Single": {"calories": 540.0, "protein": 23.0, "fat": 25.0, "carbs": 60.0},
+            "Couple": {"calories": 1080.0, "protein": 46.0, "fat": 50.0, "carbs": 120.0},
+            "Family": {"calories": 2160.0, "protein": 92.0, "fat": 100.0, "carbs": 240.0}
+        }
     },
     {
         "title": "Chicken Curry",
         "description": "Rich and creamy curry with tender pieces of chicken.",
         "imageName": "Chicken Curry",
         "ingredients": [
-            {"name": "Chicken", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Curry Powder", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "tablespoons"},
-            {"name": "Coconut Milk", "quantities": {"Single": 400, "Couple": 800, "Family": 1600}, "unit": "ml"}
+            {
+                "name": "Chicken",
+                "quantities": {"Single": 300.0, "Couple": 600.0, "Family": 1200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Curry Powder",
+                "quantities": {"Single": 2.0, "Couple": 4.0, "Family": 8.0},
+                "unit": "tablespoons"
+            },
+            {
+                "name": "Coconut Milk",
+                "quantities": {"Single": 400.0, "Couple": 800.0, "Family": 1600.0},
+                "unit": "ml"
+            }
         ],
         "category": "Non-Veg.",
-        "time": {"Single": "40 mins", "Couple": "50 mins", "Family": "60 mins"}
+        "time": {"Single": "40 mins", "Couple": "50 mins", "Family": "60 mins"},
+        "nutrition": {
+            "Single": {"calories": 679.0, "protein": 30.0, "fat": 55.0, "carbs": 10.0},
+            "Couple": {"calories": 1358.0, "protein": 60.0, "fat": 110.0, "carbs": 20.0},
+            "Family": {"calories": 2716.0, "protein": 120.0, "fat": 220.0, "carbs": 40.0}
+        }
     },
     {
         "title": "Vegetable Stir Fry",
         "description": "Quick and healthy stir fry with fresh vegetables and soy sauce.",
         "imageName": "Vegetables Stir Fry",
         "ingredients": [
-            {"name": "Broccoli", "quantities": {"Single": 150, "Couple": 300, "Family": 600}, "unit": "grams"},
-            {"name": "Carrots", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Bell Peppers", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Soy Sauce", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "tablespoons"}
+            {
+                "name": "Broccoli",
+                "quantities": {"Single": 150.0, "Couple": 300.0, "Family": 600.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Carrots",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Bell Peppers",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Soy Sauce",
+                "quantities": {"Single": 2.0, "Couple": 4.0, "Family": 8.0},
+                "unit": "tablespoons"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "20 mins", "Couple": "25 mins", "Family": "30 mins"}
+        "time": {"Single": "20 mins", "Couple": "25 mins", "Family": "30 mins"},
+        "nutrition": {
+            "Single": {"calories": 200.0, "protein": 5.0, "fat": 1.0, "carbs": 30.0},
+            "Couple": {"calories": 400.0, "protein": 10.0, "fat": 2.0, "carbs": 60.0},
+            "Family": {"calories": 800.0, "protein": 20.0, "fat": 4.0, "carbs": 120.0}
+        }
     },
     {
         "title": "Beef Tacos",
         "description": "Crispy tacos filled with seasoned beef, cheese, and fresh salsa.",
         "imageName": "Beef Tacos",
         "ingredients": [
-            {"name": "Ground Beef", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Taco Shells", "quantities": {"Single": 6, "Couple": 12, "Family": 24}, "unit": "pieces"},
-            {"name": "Cheese", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Salsa", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"}
+            {
+                "name": "Ground Beef",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Taco Shells",
+                "quantities": {"Single": 6.0, "Couple": 12.0, "Family": 24.0},
+                "unit": "pieces"
+            },
+            {
+                "name": "Cheese",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Salsa",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            }
         ],
         "category": "Non-Veg.",
-        "time": {"Single": "25 mins", "Couple": "30 mins", "Family": "35 mins"}
+        "time": {"Single": "25 mins", "Couple": "30 mins", "Family": "35 mins"},
+        "nutrition": {
+            "Single": {"calories": 610.0, "protein": 35.0, "fat": 35.0, "carbs": 25.0},
+            "Couple": {"calories": 1220.0, "protein": 70.0, "fat": 70.0, "carbs": 50.0},
+            "Family": {"calories": 2440.0, "protein": 140.0, "fat": 140.0, "carbs": 100.0}
+        }
     },
     {
         "title": "Chocolate Cake",
         "description": "Rich and moist chocolate cake with a creamy chocolate ganache.",
         "imageName": "Chocolate Cake",
         "ingredients": [
-            {"name": "Flour", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Sugar", "quantities": {"Single": 150, "Couple": 300, "Family": 600}, "unit": "grams"},
-            {"name": "Cocoa Powder", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Eggs", "quantities": {"Single": 3, "Couple": 6, "Family": 12}, "unit": "pieces"}
+            {
+                "name": "Flour",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Sugar",
+                "quantities": {"Single": 150.0, "Couple": 300.0, "Family": 600.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Cocoa Powder",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Eggs",
+                "quantities": {"Single": 3.0, "Couple": 6.0, "Family": 12.0},
+                "unit": "pieces"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "45 mins", "Couple": "55 mins", "Family": "65 mins"}
+        "time": {"Single": "45 mins", "Couple": "55 mins", "Family": "65 mins"},
+        "nutrition": {
+            "Single": {"calories": 1000.0, "protein": 36.0, "fat": 40.0, "carbs": 130.0},
+            "Couple": {"calories": 2000.0, "protein": 72.0, "fat": 80.0, "carbs": 260.0},
+            "Family": {"calories": 4000.0, "protein": 144.0, "fat": 160.0, "carbs": 520.0}
+        }
     },
     {
         "title": "Caesar Salad",
         "description": "Classic Caesar salad with romaine lettuce, parmesan, and croutons.",
         "imageName": "Caesar Salad",
         "ingredients": [
-            {"name": "Romaine Lettuce", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Parmesan Cheese", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Croutons", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Caesar Dressing", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"}
+            {
+                "name": "Romaine Lettuce",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Parmesan Cheese",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Croutons",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Caesar Dressing",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "15 mins", "Couple": "20 mins", "Family": "25 mins"}
+        "time": {"Single": "15 mins", "Couple": "20 mins", "Family": "25 mins"},
+        "nutrition": {
+            "Single": {"calories": 480.0, "protein": 15.0, "fat": 30.0, "carbs": 35.0},
+            "Couple": {"calories": 960.0, "protein": 30.0, "fat": 60.0, "carbs": 70.0},
+            "Family": {"calories": 1920.0, "protein": 60.0, "fat": 120.0, "carbs": 140.0}
+        }
     },
     {
         "title": "Margherita Pizza",
         "description": "Simple pizza with fresh tomatoes, mozzarella cheese, and basil.",
         "imageName": "Margherita Pizza",
         "ingredients": [
-            {"name": "Pizza Dough", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"},
-            {"name": "Tomatoes", "quantities": {"Single": 150, "Couple": 300, "Family": 600}, "unit": "grams"},
-            {"name": "Mozzarella", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Basil", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"}
+            {
+                "name": "Pizza Dough",
+                "quantities": {"Single": 1.0, "Couple": 2.0, "Family": 4.0},
+                "unit": "piece"
+            },
+            {
+                "name": "Tomatoes",
+                "quantities": {"Single": 150.0, "Couple": 300.0, "Family": 600.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Mozzarella",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Basil",
+                "quantities": {"Single": 10.0, "Couple": 20.0, "Family": 40.0},
+                "unit": "grams"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"}
+        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"},
+        "nutrition": {
+            "Single": {"calories": 600.0, "protein": 25.0, "fat": 25.0, "carbs": 70.0},
+            "Couple": {"calories": 1200.0, "protein": 50.0, "fat": 50.0, "carbs": 140.0},
+            "Family": {"calories": 2400.0, "protein": 100.0, "fat": 100.0, "carbs": 280.0}
+        }
     },
     {
         "title": "Lamb Rogan Josh",
         "description": "Aromatic lamb curry with a mix of spices and yogurt.",
         "imageName": "Lamb Rogan Josh",
         "ingredients": [
-            {"name": "Lamb", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Yogurt", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Spices", "quantities": {"Single": 20, "Couple": 40, "Family": 80}, "unit": "grams"},
-            {"name": "Onions", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"}
+            {
+                "name": "Lamb",
+                "quantities": {"Single": 300.0, "Couple": 600.0, "Family": 1200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Yogurt",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Spices",
+                "quantities": {"Single": 20.0, "Couple": 40.0, "Family": 80.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Onions",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            }
         ],
         "category": "Non-Veg.",
-        "time": {"Single": "50 mins", "Couple": "60 mins", "Family": "70 mins"}
+        "time": {"Single": "50 mins", "Couple": "60 mins", "Family": "70 mins"},
+        "nutrition": {
+            "Single": {"calories": 600.0, "protein": 30.0, "fat": 40.0, "carbs": 10.0},
+            "Couple": {"calories": 1200.0, "protein": 60.0, "fat": 80.0, "carbs": 20.0},
+            "Family": {"calories": 2400.0, "protein": 120.0, "fat": 160.0, "carbs": 40.0}
+        }
     },
     {
         "title": "Grilled Salmon",
         "description": "Perfectly grilled salmon with a lemon butter sauce.",
         "imageName": "Salmon",
         "ingredients": [
-            {"name": "Salmon", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Lemon", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"},
-            {"name": "Butter", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Garlic", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"}
+            {
+                "name": "Salmon",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Lemon",
+                "quantities": {"Single": 1.0, "Couple": 2.0, "Family": 4.0},
+                "unit": "piece"
+            },
+            {
+                "name": "Butter",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Garlic",
+                "quantities": {"Single": 10.0, "Couple": 20.0, "Family": 40.0},
+                "unit": "grams"
+            }
         ],
         "category": "Non-Veg.",
-        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"}
+        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"},
+        "nutrition": {
+            "Single": {"calories": 1200.0, "protein": 60.0, "fat": 80.0, "carbs": 5.0},
+            "Couple": {"calories": 2400.0, "protein": 120.0, "fat": 160.0, "carbs": 10.0},
+            "Family": {"calories": 4800.0, "protein": 240.0, "fat": 320.0, "carbs": 20.0}
+        }
     },
     {
         "title": "Pasta Primavera",
         "description": "Pasta with a colorful mix of vegetables and a light tomato sauce.",
         "imageName": "Pasta Primavera",
         "ingredients": [
-            {"name": "Pasta", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Tomatoes", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Bell Peppers", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Olive Oil", "quantities": {"Single": 20, "Couple": 40, "Family": 80}, "unit": "grams"}
+            {
+                "name": "Pasta",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Tomatoes",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Bell Peppers",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Olive Oil",
+                "quantities": {"Single": 20.0, "Couple": 40.0, "Family": 80.0},
+                "unit": "grams"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "25 mins", "Couple": "35 mins", "Family": "45 mins"}
+        "time": {"Single": "25 mins", "Couple": "35 mins", "Family": "45 mins"},
+        "nutrition": {
+            "Single": {"calories": 400.0, "protein": 10.0, "fat": 10.0, "carbs": 70.0},
+            "Couple": {"calories": 800.0, "protein": 20.0, "fat": 20.0, "carbs": 140.0},
+            "Family": {"calories": 1600.0, "protein": 40.0, "fat": 40.0, "carbs": 280.0}
+        }
     },
     {
         "title": "Mushroom Risotto",
         "description": "Creamy risotto with sautéed mushrooms and parmesan cheese.",
         "imageName": "Mushroom Risotto",
         "ingredients": [
-            {"name": "Rice", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Mushrooms", "quantities": {"Single": 150, "Couple": 300, "Family": 600}, "unit": "grams"},
-            {"name": "Parmesan Cheese", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Butter", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"}
+            {
+                "name": "Rice",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Mushrooms",
+                "quantities": {"Single": 150.0, "Couple": 300.0, "Family": 600.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Parmesan Cheese",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Butter",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "40 mins", "Couple": "50 mins", "Family": "60 mins"}
+        "time": {"Single": "40 mins", "Couple": "50 mins", "Family": "60 mins"},
+        "nutrition": {
+            "Single": {"calories": 700.0, "protein": 20.0, "fat": 40.0, "carbs": 70.0},
+            "Couple": {"calories": 1400.0, "protein": 40.0, "fat": 80.0, "carbs": 140.0},
+            "Family": {"calories": 2800.0, "protein": 80.0, "fat": 160.0, "carbs": 280.0}
+        }
     },
     {
         "title": "Pad Thai",
         "description": "Traditional Thai noodle dish with peanuts, tofu, and lime.",
         "imageName": "Thai Pad",
         "ingredients": [
-            {"name": "Rice Noodles", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Tofu", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Peanuts", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Lime", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"}
+            {
+                "name": "Rice Noodles",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Tofu",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Peanuts",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Lime",
+                "quantities": {"Single": 1.0, "Couple": 2.0, "Family": 4.0},
+                "unit": "piece"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "30 mins", "Couple": "40 mins", "Family": "50 mins"}
+        "time": {"Single": "30 mins", "Couple": "40 mins", "Family": "50 mins"},
+        "nutrition": {
+            "Single": {"calories": 600.0, "protein": 20.0, "fat": 20.0, "carbs": 80.0},
+            "Couple": {"calories": 1200.0, "protein": 40.0, "fat": 40.0, "carbs": 160.0},
+            "Family": {"calories": 2400.0, "protein": 80.0, "fat": 80.0, "carbs": 320.0}
+        }
     },
     {
         "title": "French Onion Soup",
         "description": "Hearty onion soup topped with a toasted bread slice and melted cheese.",
         "imageName": "French Onion Soup",
         "ingredients": [
-            {"name": "Onions", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Beef Broth", "quantities": {"Single": 500, "Couple": 1000, "Family": 2000}, "unit": "ml"},
-            {"name": "Bread", "quantities": {"Single": 2, "Couple": 4, "Family": 8}, "unit": "slices"},
-            {"name": "Cheese", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"}
+            {
+                "name": "Onions",
+                "quantities": {"Single": 300.0, "Couple": 600.0, "Family": 1200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Beef Broth",
+                "quantities": {"Single": 500.0, "Couple": 1000.0, "Family": 2000.0},
+                "unit": "ml"
+            },
+            {
+                "name": "Bread",
+                "quantities": {"Single": 2.0, "Couple": 4.0, "Family": 8.0},
+                "unit": "slices"
+            },
+            {
+                "name": "Cheese",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "45 mins", "Couple": "55 mins", "Family": "65 mins"}
+        "time": {"Single": "45 mins", "Couple": "55 mins", "Family": "65 mins"},
+        "nutrition": {
+            "Single": {"calories": 450.0, "protein": 20.0, "fat": 20.0, "carbs": 50.0},
+            "Couple": {"calories": 900.0, "protein": 40.0, "fat": 40.0, "carbs": 100.0},
+            "Family": {"calories": 1800.0, "protein": 80.0, "fat": 80.0, "carbs": 200.0}
+        }
     },
     {
         "title": "BBQ Ribs",
         "description": "Slow-cooked ribs coated in a rich BBQ sauce.",
         "imageName": "BBQ Ribs",
         "ingredients": [
-            {"name": "Ribs", "quantities": {"Single": 500, "Couple": 1000, "Family": 2000}, "unit": "grams"},
-            {"name": "BBQ Sauce", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Garlic Powder", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"},
-            {"name": "Onion Powder", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"}
+            {
+                "name": "Ribs",
+                "quantities": {"Single": 500.0, "Couple": 1000.0, "Family": 2000.0},
+                "unit": "grams"
+            },
+            {
+                "name": "BBQ Sauce",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Garlic Powder",
+                "quantities": {"Single": 10.0, "Couple": 20.0, "Family": 40.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Onion Powder",
+                "quantities": {"Single": 10.0, "Couple": 20.0, "Family": 40.0},
+                "unit": "grams"
+            }
         ],
         "category": "Non-Veg.",
-        "time": {"Single": "120 mins", "Couple": "150 mins", "Family": "180 mins"}
+        "time": {"Single": "120 mins", "Couple": "150 mins", "Family": "180 mins"},
+        "nutrition": {
+            "Single": {"calories": 1200.0, "protein": 70.0, "fat": 80.0, "carbs": 50.0},
+            "Couple": {"calories": 2400.0, "protein": 140.0, "fat": 160.0, "carbs": 100.0},
+            "Family": {"calories": 4800.0, "protein": 280.0, "fat": 320.0, "carbs": 200.0}
+        }
     },
     {
         "title": "Apple Pie",
         "description": "Classic apple pie with a flaky crust and sweet apple filling.",
         "imageName": "Apple Pie",
         "ingredients": [
-            {"name": "Apples", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Pie Crust", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"},
-            {"name": "Sugar", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Cinnamon", "quantities": {"Single": 5, "Couple": 10, "Family": 20}, "unit": "grams"}
+            {
+                "name": "Apples",
+                "quantities": {"Single": 300.0, "Couple": 600.0, "Family": 1200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Pie Crust",
+                "quantities": {"Single": 1.0, "Couple": 2.0, "Family": 4.0},
+                "unit": "piece"
+            },
+            {
+                "name": "Sugar",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Cinnamon",
+                "quantities": {"Single": 5.0, "Couple": 10.0, "Family": 20.0},
+                "unit": "grams"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "90 mins", "Couple": "90 mins", "Family": "120 mins"}
+        "time": {"Single": "90 mins", "Couple": "90 mins", "Family": "120 mins"},
+        "nutrition": {
+            "Single": {"calories": 600.0, "protein": 3.0, "fat": 15.0, "carbs": 130.0},
+            "Couple": {"calories": 1200.0, "protein": 6.0, "fat": 30.0, "carbs": 260.0},
+            "Family": {"calories": 2400.0, "protein": 12.0, "fat": 60.0, "carbs": 520.0}
+        }
     },
     {
         "title": "Banh Mi",
         "description": "Vietnamese sandwich with pork, pickled vegetables, and herbs.",
         "imageName": "Mi Sandwich",
         "ingredients": [
-            {"name": "Baguette", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"},
-            {"name": "Pork", "quantities": {"Single": 150, "Couple": 300, "Family": 600}, "unit": "grams"},
-            {"name": "Pickled Vegetables", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Cilantro", "quantities": {"Single": 10, "Couple": 20, "Family": 40}, "unit": "grams"}
+            {
+                "name": "Baguette",
+                "quantities": {"Single": 1.0, "Couple": 2.0, "Family": 4.0},
+                "unit": "piece"
+            },
+            {
+                "name": "Pork",
+                "quantities": {"Single": 150.0, "Couple": 300.0, "Family": 600.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Pickled Vegetables",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Cilantro",
+                "quantities": {"Single": 10.0, "Couple": 20.0, "Family": 40.0},
+                "unit": "grams"
+            }
         ],
         "category": "Non-Veg.",
-        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"}
+        "time": {"Single": "20 mins", "Couple": "30 mins", "Family": "40 mins"},
+        "nutrition": {
+            "Single": {"calories": 500.0, "protein": 25.0, "fat": 20.0, "carbs": 60.0},
+            "Couple": {"calories": 1000.0, "protein": 50.0, "fat": 40.0, "carbs": 120.0},
+            "Family": {"calories": 2000.0, "protein": 100.0, "fat": 80.0, "carbs": 240.0}
+        }
     },
     {
         "title": "Falafel Wrap",
         "description": "Middle Eastern chickpea falafel balls served in a wrap with tahini sauce.",
         "imageName": "Falafel Wrap",
         "ingredients": [
-            {"name": "Falafel", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Wrap", "quantities": {"Single": 1, "Couple": 2, "Family": 4}, "unit": "piece"},
-            {"name": "Tahini Sauce", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"},
-            {"name": "Lettuce", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "grams"}
+            {
+                "name": "Falafel",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Wrap",
+                "quantities": {"Single": 1.0, "Couple": 2.0, "Family": 4.0},
+                "unit": "piece"
+            },
+            {
+                "name": "Tahini Sauce",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Lettuce",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "grams"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "25 mins", "Couple": "35 mins", "Family": "45 mins"}
+        "time": {"Single": "25 mins", "Couple": "35 mins", "Family": "45 mins"},
+        "nutrition": {
+            "Single": {"calories": 580.0, "protein": 20.0, "fat": 30.0, "carbs": 60.0},
+            "Couple": {"calories": 1160.0, "protein": 40.0, "fat": 60.0, "carbs": 120.0},
+            "Family": {"calories": 2320.0, "protein": 80.0, "fat": 120.0, "carbs": 240.0}
+        }
     },
     {
         "title": "Chicken Biryani",
         "description": "Flavorful Indian dish with marinated chicken and spiced rice.",
         "imageName": "Chicken Biryani",
         "ingredients": [
-            {"name": "Chicken", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Basmati Rice", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Yogurt", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Spices", "quantities": {"Single": 20, "Couple": 40, "Family": 80}, "unit": "grams"}
+            {
+                "name": "Chicken",
+                "quantities": {"Single": 300.0, "Couple": 600.0, "Family": 1200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Basmati Rice",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Yogurt",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Spices",
+                "quantities": {"Single": 20.0, "Couple": 40.0, "Family": 80.0},
+                "unit": "grams"
+            }
         ],
         "category": "Non-Veg.",
-        "time": {"Single": "60 mins", "Couple": "90 mins", "Family": "120 mins"}
+        "time": {"Single": "60 mins", "Couple": "90 mins", "Family": "120 mins"},
+        "nutrition": {
+            "Single": {"calories": 700.0, "protein": 40.0, "fat": 20.0, "carbs": 80.0},
+            "Couple": {"calories": 1400.0, "protein": 80.0, "fat": 40.0, "carbs": 160.0},
+            "Family": {"calories": 2800.0, "protein": 160.0, "fat": 80.0, "carbs": 320.0}
+        }
     },
     {
         "title": "Lemon Cheesecake",
         "description": "Smooth and creamy cheesecake with a tangy lemon topping.",
         "imageName": "Lemon Cheese Cake",
         "ingredients": [
-            {"name": "Cream Cheese", "quantities": {"Single": 300, "Couple": 600, "Family": 1200}, "unit": "grams"},
-            {"name": "Sugar", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"},
-            {"name": "Lemon Juice", "quantities": {"Single": 50, "Couple": 100, "Family": 200}, "unit": "ml"},
-            {"name": "Graham Crackers", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"}
+            {
+                "name": "Cream Cheese",
+                "quantities": {"Single": 300.0, "Couple": 600.0, "Family": 1200.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Sugar",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Lemon Juice",
+                "quantities": {"Single": 50.0, "Couple": 100.0, "Family": 200.0},
+                "unit": "ml"
+            },
+            {
+                "name": "Graham Crackers",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            }
         ],
         "category": "Veg.",
-        "time": {"Single": "90 mins", "Couple": "90 mins", "Family": "120 mins"}
+        "time": {"Single": "90 mins", "Couple": "90 mins", "Family": "120 mins"},
+        "nutrition": {
+            "Single": {"calories": 800.0, "protein": 10.0, "fat": 50.0, "carbs": 70.0},
+            "Couple": {"calories": 1600.0, "protein": 20.0, "fat": 100.0, "carbs": 140.0},
+            "Family": {"calories": 3200.0, "protein": 40.0, "fat": 200.0, "carbs": 280.0}
+        }
     },
     {
         "title": "Sushi Platter",
         "description": "Assorted sushi including nigiri, maki rolls, and sashimi.",
         "imageName": "Sushi Platter",
         "ingredients": [
-            {"name": "Sushi Rice", "quantities": {"Single": 200, "Couple": 400, "Family": 800}, "unit": "grams"},
-            {"name": "Fish", "quantities": {"Single": 150, "Couple": 300, "Family": 600}, "unit": "grams"},
-            {"name": "Seaweed", "quantities": {"Single": 5, "Couple": 10, "Family": 20}, "unit": "sheets"},
-            {"name": "Vegetables", "quantities": {"Single": 100, "Couple": 200, "Family": 400}, "unit": "grams"}
+            {
+                "name": "Sushi Rice",
+                "quantities": {"Single": 200.0, "Couple": 400.0, "Family": 800.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Fish",
+                "quantities": {"Single": 150.0, "Couple": 300.0, "Family": 600.0},
+                "unit": "grams"
+            },
+            {
+                "name": "Seaweed",
+                "quantities": {"Single": 5.0, "Couple": 10.0, "Family": 20.0},
+                "unit": "sheets"
+            },
+            {
+                "name": "Vegetables",
+                "quantities": {"Single": 100.0, "Couple": 200.0, "Family": 400.0},
+                "unit": "grams"
+            }
         ],
         "category": "Non-Veg.",
-        "time": {"Single": "60 mins", "Couple": "90 mins", "Family": "120 mins"}
+        "time": {"Single": "60 mins", "Couple": "90 mins", "Family": "120 mins"},
+        "nutrition": {
+            "Single": {"calories": 400.0, "protein": 30.0, "fat": 10.0, "carbs": 50.0},
+            "Couple": {"calories": 800.0, "protein": 60.0, "fat": 20.0, "carbs": 100.0},
+            "Family": {"calories": 1600.0, "protein": 120.0, "fat": 40.0, "carbs": 200.0}
+        }
     }
 ]
+

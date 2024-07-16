@@ -8,6 +8,9 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var estimateTime: UILabel!
     @IBOutlet weak var ingredientsTableView: UITableView!
     
+    @IBOutlet weak var nutritionLabel: UILabel!
+    @IBOutlet weak var nutritionalInfoTitleLabel: UILabel!
+    @IBOutlet weak var infoButton: UIButton!
     var recipe: Recipe? {
         didSet {
             updateUI()
@@ -15,10 +18,12 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
     }
 
     var selectedFilter: String = "Single"
+    var isNutritionInfoVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
+        setupInfoButton()
         updateUI()
     }
     
@@ -27,6 +32,15 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
         ingredientsTableView.delegate = self
         ingredientsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "IngredientCell")
     }
+    private func setupInfoButton() {
+            infoButton.addTarget(self, action: #selector(infoButtonTapped), for: .touchUpInside)
+            nutritionLabel.isHidden = true
+        }
+        
+        @objc private func infoButtonTapped() {
+            isNutritionInfoVisible.toggle()
+            nutritionLabel.isHidden = !isNutritionInfoVisible
+        }
 
     private func updateUI() {
         guard isViewLoaded else { return }
@@ -36,6 +50,7 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
         recipeDescription.text = recipe.description
         estimateTime.text = "Estimated Time: \(calculateEstimatedTime()) Minutes"
         imageView.image = UIImage(named: recipe.imageName)
+        updateNutritionInfo()
         ingredientsTableView.reloadData()
     }
 
@@ -61,6 +76,31 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
         } else {
             return 0
         }
+    }
+    private func updateNutritionInfo() {
+        guard let nutrition = recipe?.nutrition[selectedFilter] else { return }
+        
+        let boldFont = UIFont.boldSystemFont(ofSize: 17)
+        let normalFont = UIFont.systemFont(ofSize: 17)
+        
+        let attributedText = NSMutableAttributedString()
+        
+        let boldAttributes: [NSAttributedString.Key: Any] = [.font: boldFont]
+        let normalAttributes: [NSAttributedString.Key: Any] = [.font: normalFont]
+        
+        attributedText.append(NSAttributedString(string: "Calories: ", attributes: boldAttributes))
+        attributedText.append(NSAttributedString(string: "\(nutrition.calories) kcal\n", attributes: normalAttributes))
+        
+        attributedText.append(NSAttributedString(string: "Protein: ", attributes: boldAttributes))
+        attributedText.append(NSAttributedString(string: "\(nutrition.protein) g\n", attributes: normalAttributes))
+        
+        attributedText.append(NSAttributedString(string: "Fat: ", attributes: boldAttributes))
+        attributedText.append(NSAttributedString(string: "\(nutrition.fat) g\n", attributes: normalAttributes))
+        
+        attributedText.append(NSAttributedString(string: "Carbs: ", attributes: boldAttributes))
+        attributedText.append(NSAttributedString(string: "\(nutrition.carbs) g", attributes: normalAttributes))
+        
+        nutritionLabel.attributedText = attributedText
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
