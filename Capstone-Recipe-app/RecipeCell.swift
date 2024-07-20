@@ -32,17 +32,3 @@ class RecipeTableViewCell: UITableViewCell {
         recipeImageView.image = UIImage(named: recipe.imageName)
     }
 }
-
-extension Recipe.TimeInfo {
-    func singleInMinutes() -> Int {
-        return Int(single.components(separatedBy: " ")[0]) ?? 0
-    }
-    
-    func coupleInMinutes() -> Int {
-        return Int(couple.components(separatedBy: " ")[0]) ?? 0
-    }
-    
-    func familyInMinutes() -> Int {
-        return Int(family.components(separatedBy: " ")[0]) ?? 0
-    }
-}

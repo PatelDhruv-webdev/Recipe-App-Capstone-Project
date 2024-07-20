@@ -25,7 +25,6 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.title = "Recipe App"
         setupTableView()
         setupSearchController()
         loadRecipes()
@@ -77,13 +76,12 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
         }
         
         filteredRecipes = filteredRecipes.filter { recipe in
-            true
-        }
-        
-        if let searchText = searchText, !searchText.isEmpty {
-            filteredRecipes = filteredRecipes.filter { recipe in
-                recipe.title.lowercased().contains(searchText.lowercased())
+            if let searchText = searchText, !searchText.isEmpty {
+                let containsTitle = recipe.title.lowercased().contains(searchText.lowercased())
+                let containsIngredient = recipe.ingredients.contains { $0.name.lowercased().contains(searchText.lowercased()) }
+                return containsTitle || containsIngredient
             }
+            return true
         }
         
         updateNoResultsLabel()
