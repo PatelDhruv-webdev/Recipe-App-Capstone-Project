@@ -289,11 +289,79 @@
                     </tabBar>
                     <connections>
                         <segue destination="wa5-uS-lPx" kind="relationship" relationship="viewControllers" id="V8v-pQ-xa5"/>
+                        <segue destination="VoL-nW-w0C" kind="relationship" relationship="viewControllers" id="ml3-3l-fRl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HE-8A-CLE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="904.58015267175574" y="-35.211267605633807"/>
+        </scene>
+        <!--recipe of the day-->
+        <scene sceneID="fcE-jX-WpE">
+            <objects>
+                <viewController id="VoL-nW-w0C" customClass="RecipeOfTheDayViewController" customModule="Capstone_Recipe_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cHB-XW-jCS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQh-fb-UWY">
+                                <rect key="frame" x="73" y="219" width="247" height="324"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y4-79-n6Y">
+                                <rect key="frame" x="28" y="607.66666666666663" width="336" height="26.333333333333371"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES" adjustable="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBs-Fq-KQp">
+                                <rect key="frame" x="27" y="684.66666666666663" width="339" height="20.333333333333371"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" adjustable="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Of The Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY5-a1-p2q">
+                                <rect key="frame" x="32" y="94" width="345" height="67.666666666666686"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES" adjustable="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6ez-aA-8RT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JQh-fb-UWY" firstAttribute="top" secondItem="TY5-a1-p2q" secondAttribute="bottom" constant="57.329999999999998" id="BgS-lA-yS4"/>
+                            <constraint firstItem="2y4-79-n6Y" firstAttribute="top" secondItem="JQh-fb-UWY" secondAttribute="bottom" constant="64.670000000000002" id="MfY-uy-dtW"/>
+                            <constraint firstItem="TY5-a1-p2q" firstAttribute="leading" secondItem="6ez-aA-8RT" secondAttribute="leading" constant="32" id="VBx-ZM-esh"/>
+                            <constraint firstItem="6ez-aA-8RT" firstAttribute="trailing" secondItem="JQh-fb-UWY" secondAttribute="trailing" constant="73" id="Yy6-hg-Y0d"/>
+                            <constraint firstItem="iBs-Fq-KQp" firstAttribute="top" secondItem="2y4-79-n6Y" secondAttribute="bottom" constant="50.670000000000002" id="b0W-gf-W1S"/>
+                            <constraint firstItem="6ez-aA-8RT" firstAttribute="bottom" secondItem="iBs-Fq-KQp" secondAttribute="bottom" constant="64" id="c3q-MI-ZPv"/>
+                            <constraint firstItem="2y4-79-n6Y" firstAttribute="leading" secondItem="6ez-aA-8RT" secondAttribute="leading" constant="28" id="cxf-qd-Sze"/>
+                            <constraint firstItem="6ez-aA-8RT" firstAttribute="trailing" secondItem="TY5-a1-p2q" secondAttribute="trailing" constant="16" id="dFi-3O-z4W"/>
+                            <constraint firstItem="6ez-aA-8RT" firstAttribute="trailing" secondItem="2y4-79-n6Y" secondAttribute="trailing" constant="29" id="f8W-gY-aag"/>
+                            <constraint firstItem="JQh-fb-UWY" firstAttribute="leading" secondItem="6ez-aA-8RT" secondAttribute="leading" constant="73" id="h9K-HG-3bF"/>
+                            <constraint firstItem="6ez-aA-8RT" firstAttribute="trailing" secondItem="iBs-Fq-KQp" secondAttribute="trailing" constant="27" id="lKT-2R-1db"/>
+                            <constraint firstItem="TY5-a1-p2q" firstAttribute="top" secondItem="6ez-aA-8RT" secondAttribute="top" constant="35" id="nU1-oS-eBF"/>
+                            <constraint firstItem="iBs-Fq-KQp" firstAttribute="leading" secondItem="6ez-aA-8RT" secondAttribute="leading" constant="27" id="oaj-0D-9Iz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="recipe of the day" image="sparkles.tv" catalog="system" id="vCB-Tc-oVT"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="iBs-Fq-KQp" id="CLr-Up-9gh"/>
+                        <outlet property="imageView" destination="JQh-fb-UWY" id="2d9-k5-yF7"/>
+                        <outlet property="titleLabel" destination="2y4-79-n6Y" id="UgG-V7-p3i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7v5-yj-YKC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.58015267175574" y="723.94366197183103"/>
         </scene>
         <!--Home-->
         <scene sceneID="3pc-FA-N27">
@@ -319,6 +387,7 @@
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="line.3.horizontal.decrease.circle" catalog="system" width="128" height="123"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="sparkles.tv" catalog="system" width="128" height="95"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
