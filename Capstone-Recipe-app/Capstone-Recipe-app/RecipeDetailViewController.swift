@@ -7,10 +7,12 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var recipeDescription: UILabel!
     @IBOutlet weak var estimateTime: UILabel!
     @IBOutlet weak var ingredientsTableView: UITableView!
-    
     @IBOutlet weak var nutritionLabel: UILabel!
     @IBOutlet weak var nutritionalInfoTitleLabel: UILabel!
     @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var timerButton: UIButton!
+    
     var recipe: Recipe? {
         didSet {
             updateUI()
@@ -19,11 +21,15 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
 
     var selectedFilter: String = "Single"
     var isNutritionInfoVisible = false
+    private var timer: Timer?
+    private var secondsRemaining: Int = 0
+    private var isTimerRunning = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         setupInfoButton()
+        setupTimer()
         updateUI()
     }
     
@@ -32,20 +38,66 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
         ingredientsTableView.delegate = self
         ingredientsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "IngredientCell")
     }
+    
     private func setupInfoButton() {
-            infoButton.addTarget(self, action: #selector(infoButtonTapped), for: .touchUpInside)
-            nutritionLabel.isHidden = true
-        }
+        infoButton.addTarget(self, action: #selector(infoButtonTapped), for: .touchUpInside)
+        nutritionLabel.isHidden = true
+    }
         
-        @objc private func infoButtonTapped() {
-            isNutritionInfoVisible.toggle()
-            nutritionLabel.isHidden = !isNutritionInfoVisible
-        }
+    
+    @objc private func infoButtonTapped() {
+        isNutritionInfoVisible.toggle()
+        nutritionLabel.isHidden = !isNutritionInfoVisible
+    }
 
+    private func setupTimer() {
+        timerLabel.text = "00:00"
+        timerButton.setTitle("Start", for: .normal)
+    }
+    
+    @IBAction func timerButtonTapped(_ sender: UIButton) {
+        if isTimerRunning {
+            resetTimer()
+        } else {
+            startTimer()
+        }
+    }
+    
+    private func startTimer() {
+        guard !isTimerRunning else { return }
+        secondsRemaining = calculateEstimatedTime() * 60
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timerButton.setTitle("Reset", for: .normal)
+        isTimerRunning = true
+    }
+        
+    private func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+        
+    private func resetTimer() {
+        stopTimer()
+        timerLabel.text = "00:00"
+        timerButton.setTitle("Start", for: .normal)
+        isTimerRunning = false
+    }
+        
+    @objc private func updateTimer() {
+        if secondsRemaining > 0 {
+            secondsRemaining -= 1
+            let minutes = secondsRemaining / 60
+            let seconds = secondsRemaining % 60
+            timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
+        } else {
+            stopTimer()
+            timerLabel.text = "Time's up!"
+        }
+    }
+    
     private func updateUI() {
         guard isViewLoaded else { return }
         guard let recipe = recipe else { return }
-        
         recipeTitle.text = recipe.title
         recipeDescription.text = recipe.description
         estimateTime.text = "Estimated Time: \(calculateEstimatedTime()) Minutes"
@@ -77,6 +129,7 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
             return 0
         }
     }
+    
     private func updateNutritionInfo() {
         guard let nutrition = recipe?.nutrition[selectedFilter] else { return }
         

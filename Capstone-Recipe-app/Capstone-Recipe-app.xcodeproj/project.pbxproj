@@ -76,10 +76,10 @@
 			children = (
 				FC7D8AE32BFAEE6F002B04A9 /* AppDelegate.swift */,
 				FC7D8AE52BFAEE6F002B04A9 /* SceneDelegate.swift */,
-				4D7EE82F2C4DAAD10071FF22 /* RecipeOfTheDayViewController.swift */,
 				FC7D8AE72BFAEE6F002B04A9 /* ViewController.swift */,
-				FC7D8AE92BFAEE6F002B04A9 /* Main.storyboard */,
 				DBA36D292C28F5E800968C12 /* RecipeDetailViewController.swift */,
+				4D7EE82F2C4DAAD10071FF22 /* RecipeOfTheDayViewController.swift */,
+				FC7D8AE92BFAEE6F002B04A9 /* Main.storyboard */,
 				FC7D8AEF2BFAEE71002B04A9 /* Assets.xcassets */,
 				FC7D8AF12BFAEE71002B04A9 /* LaunchScreen.storyboard */,
 				FC7D8AF42BFAEE71002B04A9 /* Info.plist */,

@@ -1,9 +1,6 @@
-//
 //  RecipeOfTheDayViewController.swift
 //  Capstone-Recipe-app
-//
 //  Created by Tirth Shah on 2024-07-21.
-//
 
 import UIKit
 
