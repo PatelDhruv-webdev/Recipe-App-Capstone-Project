@@ -34,4 +34,38 @@ struct Recipe: Codable {
         }
     }
 }
-
+//
+//struct Recipe: Codable {
+//    var title: String
+//    var description: String
+//    var imageName: String
+//    var ingredients: [Ingredient]
+//    var category: String
+//    var time: TimeInfo
+//    var nutrition: [String: NutritionInfo]
+//
+//    struct Ingredient: Codable {
+//        var name: String
+//        var quantities: [String: Double]
+//        var unit: String
+//    }
+//
+//    struct TimeInfo: Codable {
+//        var Single: String
+//        var Couple: String
+//        var Family: String
+//
+//        enum CodingKeys: String, CodingKey {
+//            case Single = "Single"
+//            case Couple = "Couple"
+//            case Family = "Family"
+//        }
+//    }
+//
+//    struct NutritionInfo: Codable {
+//        var calories: Double
+//        var protein: Double
+//        var fat: Double
+//        var carbs: Double
+//    }
+//}
