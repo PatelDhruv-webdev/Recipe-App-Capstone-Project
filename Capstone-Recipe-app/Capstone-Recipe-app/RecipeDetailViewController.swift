@@ -13,6 +13,7 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var timerButton: UIButton!
     
+    @IBOutlet weak var shareButton: UIButton!
     var recipe: Recipe? {
         didSet {
             updateUI()
@@ -31,6 +32,7 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
         setupInfoButton()
         setupTimer()
         updateUI()
+        setupShareButton()
     }
     
     private func setupTableView() {
@@ -43,7 +45,10 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
         infoButton.addTarget(self, action: #selector(infoButtonTapped), for: .touchUpInside)
         nutritionLabel.isHidden = true
     }
-        
+    
+    private func setupShareButton() {
+        shareButton.addTarget(self, action: #selector(shareRecipe), for: .touchUpInside)
+    }
     
     @objc private func infoButtonTapped() {
         isNutritionInfoVisible.toggle()
@@ -154,6 +159,44 @@ class RecipeDetailViewController: UIViewController, UITableViewDataSource, UITab
         attributedText.append(NSAttributedString(string: "\(nutrition.carbs) g", attributes: normalAttributes))
         
         nutritionLabel.attributedText = attributedText
+    }
+
+    @objc private func shareRecipe() {
+        guard let recipe = recipe else { return }
+
+        let recipeText = """
+        🌟 Check out this amazing recipe: **\(recipe.title)** 🌟
+
+        📝 **Description:** \(recipe.description)
+
+        ⏰ **Estimated Time:** \(calculateEstimatedTime()) minutes
+
+        🥕 **Ingredients:**
+        \(recipe.ingredients.map { "• \($0.name): \($0.quantities[selectedFilter] ?? 0) \($0.unit)" }.joined(separator: "\n"))
+
+        🥗 **Nutrition (\(selectedFilter)):**
+        - Calories: \(recipe.nutrition[selectedFilter]?.calories ?? 0) kcal
+        - Protein: \(recipe.nutrition[selectedFilter]?.protein ?? 0) g
+        - Fat: \(recipe.nutrition[selectedFilter]?.fat ?? 0) g
+        - Carbs: \(recipe.nutrition[selectedFilter]?.carbs ?? 0) g
+
+        Download our app for more delicious recipes! 🍽️
+        """
+        
+        // Make sure the image exists
+        guard let recipeImage = UIImage(named: recipe.imageName) else {
+            presentAlert("Image not found")
+            return
+        }
+
+        let activityViewController = UIActivityViewController(activityItems: [recipeText, recipeImage], applicationActivities: nil)
+        present(activityViewController, animated: true, completion: nil)
+    }
+
+    private func presentAlert(_ message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
