@@ -1,4 +1,3 @@
-
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUpdating, UITableViewDelegate {
@@ -13,6 +12,7 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
     var categoryFilter: String?
     var searchText: String?
     var selectedTimeSlot: TimeSlot = .all
+    var isShowingPopular: Bool = false
 
     enum TimeSlot {
         case all
@@ -105,30 +105,32 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
     }
     
     private func applyFilters() {
-        filteredRecipes = recipes
-        
-        if let categoryFilter = categoryFilter {
-            filteredRecipes = filteredRecipes.filter { $0.category == categoryFilter }
-        }
-        
-        filteredRecipes = filteredRecipes.filter { recipe in
-            if let searchText = searchText, !searchText.isEmpty {
-                let containsTitle = recipe.title.lowercased().contains(searchText.lowercased())
-                let containsIngredient = recipe.ingredients.contains { $0.name.lowercased().contains(searchText.lowercased()) }
-                return containsTitle || containsIngredient
+        if isShowingPopular {
+            filteredRecipes = getMostPopularRecipes()
+        } else {
+            filteredRecipes = recipes
+            
+            if let categoryFilter = categoryFilter {
+                filteredRecipes = filteredRecipes.filter { $0.category == categoryFilter }
             }
-            return true
-        }
-        
-        // Filter by time slot
-        filteredRecipes = filteredRecipes.filter { recipe in
-            let minutes = extractMinutes(from: recipe.time, for: servingSizeFilter)
-            return selectedTimeSlot.matches(minutes: minutes)
-        }
-        
-        // Sort recipes by preparation time for the selected time slot
-        filteredRecipes.sort { recipe1, recipe2 in
-            return extractMinutes(from: recipe1.time, for: servingSizeFilter) < extractMinutes(from: recipe2.time, for: servingSizeFilter)
+            
+            filteredRecipes = filteredRecipes.filter { recipe in
+                if let searchText = searchText, !searchText.isEmpty {
+                    let containsTitle = recipe.title.lowercased().contains(searchText.lowercased())
+                    let containsIngredient = recipe.ingredients.contains { $0.name.lowercased().contains(searchText.lowercased()) }
+                    return containsTitle || containsIngredient
+                }
+                return true
+            }
+            
+            filteredRecipes = filteredRecipes.filter { recipe in
+                let minutes = extractMinutes(from: recipe.time, for: servingSizeFilter)
+                return selectedTimeSlot.matches(minutes: minutes)
+            }
+            
+            filteredRecipes.sort { recipe1, recipe2 in
+                return extractMinutes(from: recipe1.time, for: servingSizeFilter) < extractMinutes(from: recipe2.time, for: servingSizeFilter)
+            }
         }
         
         updateNoResultsLabel()
@@ -189,17 +191,26 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
     
     private func showFilterOptions() {
         let alertController = UIAlertController(title: "Filter Recipes", message: nil, preferredStyle: .actionSheet)
+        
+        let mostPopularAction = UIAlertAction(title: "Most Popular", style: .default) { _ in
+            self.isShowingPopular = true
+            self.categoryFilter = nil
+            self.applyFilters()
+        }
+        alertController.addAction(mostPopularAction)
 
         let categories = ["Veg.", "Non-Veg."]
         
         for category in categories {
             let categoryAction = UIAlertAction(title: category, style: .default) { _ in
+                self.isShowingPopular = false
                 self.filterRecipesByCategory(category)
             }
             alertController.addAction(categoryAction)
         }
         
         let allCategoriesAction = UIAlertAction(title: "All Categories", style: .default) { _ in
+            self.isShowingPopular = false
             self.categoryFilter = nil
             self.applyFilters()
         }
@@ -212,6 +223,17 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
             popoverController.barButtonItem = navigationItem.rightBarButtonItem
         }
         present(alertController, animated: true, completion: nil)
+    }
+    
+    private func getMostPopularRecipes() -> [Recipe] {
+        return recipes.filter { recipe in
+            recipe.title == "Chocolate Cake" || recipe.title == "Spaghetti Carbonara" || recipe.title == "Margherita Pizza"
+        }
+    }
+
+    private func filterRecipesByCategory(_ category: String) {
+        self.categoryFilter = category
+        self.applyFilters()
     }
     
     private func showTimeSlotOptions() {
@@ -256,11 +278,6 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
         applyFilters()
     }
     
-    private func filterRecipesByCategory(_ category: String) {
-        categoryFilter = category
-        applyFilters()
-    }
-    
     private func extractMinutes(from timeInfo: Recipe.TimeInfo, for timeSlot: String) -> Int {
         switch timeSlot {
         case "Single":
@@ -283,3 +300,4 @@ class ViewController: UIViewController, UITableViewDataSource, UISearchResultsUp
         }
     }
 }
+
